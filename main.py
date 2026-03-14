@@ -4,7 +4,7 @@ main.py - Multi-Agent RAG System for Course Q&A
 Architecture (from Paper 1 - Agentic RAG, Section 4.2):
   - Orchestrator Agent: Plans, delegates to sub-agents, synthesizes final answer
   - Retriever Agent: Searches local course documents via ChromaDB
-  - Web Search Agent: Searches the web via DuckDuckGo for supplementary info
+  - Web Search Agent: Searches the web via Wikipedia for supplementary info
 
 Framework inspiration (from Paper 2 - Orchestral AI):
   - Provider-agnostic design (Ollama for local LLM)
@@ -111,7 +111,7 @@ RULES:
 
 You have access to:
 - search_course_docs: Searches local course notes/documents in the vector store
-- search_web: Searches the web via DuckDuckGo for supplementary information
+- search_web: Searches Wikipedia for supplementary information
 """
 
 
@@ -132,7 +132,7 @@ class OrchestratorAgent:
     Implements Paper 1 (Agentic RAG) Section 4.2:
     - Multi-agent collaboration via tool-based delegation
     - Retriever agent (ChromaDB tool)
-    - Web search agent (DuckDuckGo tool)
+    - Web search agent (Wikipedia tool)
     - Orchestrator synthesizes results
     """
 
