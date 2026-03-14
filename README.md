@@ -8,7 +8,7 @@ This project implements patterns from recent AI research:
 1. **Agentic RAG**:
    - **Orchestrator Agent**: Plans, delegates tasks to sub-agents, and synthesizes the final answer.
    - **Retriever Agent**: Built on ChromaDB, it searches through your local course documents.
-   - **Web Search Agent**: Uses DuckDuckGo to search the web for supplementary or current information when local docs fall short.
+   - **Web Search Agent**: Uses Wikipedia to search the web for supplementary or current information when local docs fall short.
 
 2. **Orchestral AI**:
    - Provider-agnostic design utilizing local/cloud Ollama models.
@@ -17,7 +17,7 @@ This project implements patterns from recent AI research:
 
 ## Features
 - **Local Vector Search**: Uses ChromaDB and `all-MiniLM-L6-v2` embeddings to search through local PDFs and text files.
-- **Web Fallback**: Automatically searches Wikipedia/DuckDuckGo when the local documents lack sufficient context.
+- **Web Fallback**: Automatically searches Wikipedia when the local documents lack sufficient context.
 - **Multi-Agent Orchestration**: Intelligent routing and synthesis of information by a primary Orchestrator Agent.
 - **Transparent Reasoning**: Verbose CLI output showing the Orchestrator's thought process, tool calls, and retrieved sources.
 
@@ -83,5 +83,5 @@ During the interactive Q&A session, you can use the following commands:
 - `chroma_db/` - Directory containing the local vector database instance. (gitignored)
 - `tools/` - Directory containing the individual agent tools.
   - `retriever.py` - Connects to ChromaDB for local document search.
-  - `web_search.py` - Connects to DuckDuckGo/Wikipedia for live web searches.
+  - `web_search.py` - Connects to Wikipedia for live web searches.
 - `requirement.txt` - Python package dependencies.
