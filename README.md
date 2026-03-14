@@ -5,12 +5,12 @@ A robust Retrieval-Augmented Generation (RAG) system built with a multi-agent ar
 ## Architecture & Design
 This project implements patterns from recent AI research:
 
-1. **Agentic RAG **:
+1. **Agentic RAG**:
    - **Orchestrator Agent**: Plans, delegates tasks to sub-agents, and synthesizes the final answer.
    - **Retriever Agent**: Built on ChromaDB, it searches through your local course documents.
    - **Web Search Agent**: Uses DuckDuckGo to search the web for supplementary or current information when local docs fall short.
 
-2. **Orchestral AI **:
+2. **Orchestral AI**:
    - Provider-agnostic design utilizing local/cloud Ollama models.
    - Tool-based agent architecture ensuring clear separation of concerns.
    - Synchronous execution for deterministic behavior and reliable subagent delegation.
